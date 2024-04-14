@@ -1,4 +1,5 @@
 --Q1) Who prefers energy drink more? (male/female/non-binary)
+
 Approach-1:
 Select 
 Gender,
@@ -163,6 +164,7 @@ count(respondent_id) no_of_respondents
 from fact_survey_responses  
 group by Typical_consumption_situations
 order by no_of_respondents desc;
+
 
 --Q14) What factors influence respondents' purchase decisions, such as price range and limited edition packaging?
 
