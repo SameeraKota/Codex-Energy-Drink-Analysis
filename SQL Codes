@@ -1,1 +1,209 @@
-mkdir sql_Queries 
+--Q1) Who prefers energy drink more? (male/female/non-binary)
+Approach-1:
+Select 
+Gender,
+count(respondent_id) as cnt
+from dim_respondents
+group by gender;
+
+Approach-2:
+WIth cte as(
+select f.consume_frequency, dr.gender, count(dr.respondent_id) as cnt,
+rank() over (partition by f.consume_frequency order by count(dr.respondent_id) desc) as rnk
+from fact_survey_responses f 
+join dim_respondents dr on f.respondent_id = dr.respondent_id
+group by f.consume_frequency, dr.gender)
+Select 
+consume_frequency,
+gender
+from cte
+where rnk=1;
+
+
+--Q2) Which age group prefers energy drinks more?
+
+WIth cte as(
+select f.consume_frequency, dr.age, count(dr.respondent_id) no_of_respondents ,
+rank() over (partition by f.consume_frequency order by count(dr.respondent_id) desc) as rnk
+from fact_survey_responses f 
+join dim_respondents dr on f.respondent_id = dr.respondent_id
+group by f.consume_frequency, dr.age)
+select consume_frequency, age, no_of_respondents
+from cte
+where rnk=1;
+
+
+--Q3) Which type of marketing reaches the most Youth (15-30)?
+
+Select 
+f.marketing_channels, count(dr.respondent_id) no_of_respondents
+from fact_survey_responses f 
+join dim_respondents dr on f.respondent_id = dr.respondent_id 
+where dr.age in ('15-18', '19-30')
+group by f.marketing_channels
+order by no_of_respondents desc
+limit 1;
+
+
+--Q4) What are the preferred ingredients of energy drinks among respondents?
+
+Select
+Ingredients_expected, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Ingredients_expected
+order by no_of_respondents desc
+limit 1;
+
+
+--Q5) What packaging preferences do respondents have for energy drinks?
+
+Select
+Packaging_preference, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Packaging_preference
+order by no_of_respondents desc;
+
+--Q6) Who are the current market leaders?
+
+Select
+Current_brands, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Current_brands
+order by no_of_respondents desc
+limit 3;
+
+
+--Q7) What are the primary reasons consumers prefer those brands over ours?
+
+Select
+Reasons_for_choosing_brands, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Reasons_for_choosing_brands
+order by no_of_respondents desc
+limit 3;
+
+--Q8) Which marketing channel can be used to reach more customers?
+
+Select
+marketing_channels, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by marketing_channels
+order by no_of_respondents desc
+limit 1 ;
+
+
+--Q9) How effective are different marketing strategies and channels in reaching our customers?
+
+Select
+dr.age,
+f.marketing_channels, 
+count(f.respondent_id) no_of_respondents
+from fact_survey_responses  f
+join dim_respondents dr on f.respondent_id = dr.respondent_id 
+where f.current_brands = "Codex"
+GROUP BY dr.Age, f.Marketing_channels
+order by no_of_respondents desc;
+
+
+--Q10) What do people think about our brand? (overall rating)
+    
+Select
+Brand_perception, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+where current_brands = "Codex"
+group by Brand_perception
+order by no_of_respondents desc
+;
+
+Select 
+avg(taste_experience) as overall_rating 
+from fact_survey_responses  
+where current_brands = "Codex";
+
+
+--Q11)  Which cities do we need to focus more on?
+
+select city, brand_perception, cnt, percentage from (
+Select
+dc.city, 
+f.current_brands,
+f.brand_perception,
+count(f.respondent_id) as Cnt,
+Round((COUNT(*) * 100.0) / (SELECT COUNT(*) FROM fact_survey_responses), 2) AS Percentage
+from fact_survey_responses f
+join dim_respondents dr on f.respondent_id = dr.respondent_id
+join dim_cities dc on dc.city_id = dr.city_id
+group by dc.city, f.current_brands, f.brand_perception) a
+group by city, brand_perception, cnt, percentage
+order by cnt desc;
+
+
+--Q12) Where do respondents prefer to purchase energy drinks?
+
+Select
+Purchase_location, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Purchase_location
+order by no_of_respondents desc
+limit 3;
+
+
+--Q13) What are the typical consumption situations for energy drinks among respondents?
+
+Select
+Typical_consumption_situations, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Typical_consumption_situations
+order by no_of_respondents desc;
+
+--Q14) What factors influence respondents' purchase decisions, such as price range and limited edition packaging?
+
+Select
+Price_range, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by price_range
+order by no_of_respondents desc;
+
+Select
+Limited_edition_packaging, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Limited_edition_packaging
+order by no_of_respondents desc;
+
+Select
+Health_concerns, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Health_concerns
+order by no_of_respondents desc;
+
+Select
+Interest_in_natural_or_organic, 
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+group by Interest_in_natural_or_organic
+order by no_of_respondents desc;
+
+
+--Q15) Which area of business should we focus more on our product development? (Branding/taste/availability)
+
+Select 
+Reasons_preventing_trying,
+count(respondent_id) no_of_respondents
+from fact_survey_responses  
+where current_brands = "Codex"
+group by Reasons_preventing_trying
+order by no_of_respondents desc;
+
+
+
