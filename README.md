@@ -14,7 +14,8 @@ This file contains all the meta information regarding the columns described in t
 2. dim_cities
 3. fact_survey_responses
 
-<img src="![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)" alt="Data Model">
+![Data Model](![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)
+
 
 
 
