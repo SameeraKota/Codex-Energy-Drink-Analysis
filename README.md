@@ -1,5 +1,5 @@
 # Codex Energy Drink Analysis 
-## Domain: F & B   Function: Marketing  
+### Domain: F & B    Function: Marketing  
 This is a resume project, conducted by Codebasics in Food and Beverage Industry.
 
 CodeX, a German beverage company, has launched its energy drink in the dynamic Indian market.
@@ -9,6 +9,7 @@ Objectives: Increase brand awareness, capture market share, and drive product de
 Let's delve into the survey results and strategic recommendations to propel CodeX's success in India.
 
 For Sql queries, check: [SQL Queries](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/SQL%20Queries)
+
 For Codex PPT, check: [Codex Analysis PPT](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/Codex%20Analysis.pdf)
 
 
@@ -18,7 +19,7 @@ This file contains all the meta information regarding the columns described in t
 2. dim_cities
 3. fact_survey_responses
 
-![Data Model](![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)
+(![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)
 
 
 ## Key Insights 
