@@ -9,13 +9,12 @@ Let's delve into the survey results and strategic recommendations to propel Code
 
 
 ## Data Model
-This file contains all the meta information regarding the columns described in the CSV files. We have provided 3 CSV files:
+This file contains all the meta information regarding the columns described in the CSV files.
 1. dim_respondents
 2. dim_cities
 3. fact_survey_responses
 
 ![Data Model](![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)
-
 
 
 
