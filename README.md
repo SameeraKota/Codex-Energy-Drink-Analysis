@@ -1,11 +1,15 @@
 # Codex Energy Drink Analysis 
 ## Domain: F & B   Function: Marketing  
 This is a resume project, conducted by Codebasics in Food and Beverage Industry.
+
 CodeX, a German beverage company, has launched its energy drink in the dynamic Indian market.
 Initial launch spanned across 10 cities in India, marking the beginning of its market strategy.
 Market research conducted by the Marketing team garnered insights from 10,000 respondents in these cities.
 Objectives: Increase brand awareness, capture market share, and drive product development initiatives.
 Let's delve into the survey results and strategic recommendations to propel CodeX's success in India.
+
+For Sql queries, check: [SQL Queries](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/SQL%20Queries)
+For Codex PPT, check: [Codex Analysis PPT](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/Codex%20Analysis.pdf)
 
 
 ## Data Model
@@ -51,8 +55,5 @@ Also 43% favor a price range of 50-99 Rs, while 60% prioritize health concerns, 
 
 * The key areas for product development should include improving our brand reputation, addressing health concerns, making our drinks more available and enhancing taste.
 
-* Despite our energy drinks offering benefits such as increased energy and focus, boosted sports performance, and combating fatigue, consumers prioritize the addition of more natural ingredients, reduced sugar content, and a wider range of flavors.
-
-
-15% consumers favor more natural ingredients, while 10% prefer reduced sugar content. Codex boasts 15% positive brand perceptions and an average taste rating of 3.27. 
+* Despite our energy drinks offering benefits such as increased energy and focus, boosted sports performance, and combating fatigue, consumers prioritize the addition of more natural ingredients, reduced sugar content, and a wider range of flavors. 15% consumers favor more natural ingredients, while 10% prefer reduced sugar content. Codex boasts 15% positive brand perceptions and an average taste rating of 3.27. 
 
