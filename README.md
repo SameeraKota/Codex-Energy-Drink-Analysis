@@ -24,7 +24,7 @@ This file contains all the meta information regarding the columns described in t
 
 ![Screenshot 2024-04-07 135750](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/assets/151723407/0e05df00-365f-43e8-9c72-a2c7494bcc91)
 
-### Tool Used
+## Tool Used
 * For solving SQL queries: MySQLWorkbench
 * For visualization: Power BI
 * For presentation: PowerPoint
