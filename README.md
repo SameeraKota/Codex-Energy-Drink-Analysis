@@ -9,6 +9,8 @@ Market research conducted by the Marketing team garnered insights from 10,000 re
 Objectives: Increase brand awareness, capture market share, and drive product development initiatives.
 Let's delve into the survey results and strategic recommendations to propel CodeX's success in India.
 
+For PPT presentation, check: [Video Presentation](https://youtu.be/cOFDu6L0vAU)
+
 For Sql queries, check: [SQL Queries](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/SQL%20Queries)
 
 For Codex PPT, check: [Codex Analysis PPT](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/Codex%20Analysis.pdf)
