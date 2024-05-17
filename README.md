@@ -15,6 +15,8 @@ For Sql queries, check: [SQL Queries](https://github.com/SameeraKota/Codex-Energ
 
 For Codex PPT, check: [Codex Analysis PPT](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/Codex%20Analysis.pdf)
 
+For Power BI report, check: [Codex Analysis PowerBI Report](https://github.com/SameeraKota/Codex-Energy-Drink-Analysis/blob/main/Codex%20Analysis%20PowerBI%20Report.pdf)
+
 
 ## Data Model
 This file contains all the meta information regarding the columns described in the CSV files.
